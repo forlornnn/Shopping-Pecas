@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Peças | Autopeças, Kits de Fixação, Suspensão e Acabamento</title>
+  <!-- Puxando o tailwind css na manha -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="bg-slate-50 text-zinc-900 antialiased">
+
+  <!-- Barra Superior de Confiança -->
+  <div class="bg-zinc-950 text-zinc-300 text-xs py-2 px-4 border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <p>🚚 Envio rápido para todo o Brasil | Especialistas em Linha Leve, Utilitários e Pesada</p>
+      <div class="flex items-center gap-4">
+        <a href="#ofertas-kits" class="hover:text-white transition">Kits para Oficinas</a>
+        <span>•</span>
+        <a href="https://wa.me/5511941209722" target="_blank" class="text-red-500 font-semibold hover:underline">Atendimento WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Principal + Busca em Destaque -->
+  <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 shrink-0">
+        <div class="text-white font-black text-xl px-3 py-1.5 rounded tracking-tight">
+          <img src="./images/logo-shopping-pecas_LtxK.webp" alt="logo_shoppingpecas">
+        </div>
+      </a>
+
+      <!-- Barra de Busca Inteligente -->
+      <div class="w-full max-w-2xl relative">
+        <input 
+          type="text" 
+          placeholder="Busque por peça, código original ou veículo (ex: Grampo Palio, Amortecedor Gol G5)..." 
+          class="w-full bg-slate-100 border border-slate-300 text-sm rounded-lg pl-4 pr-28 py-3 focus:outline-none focus:border-red-600 focus:bg-white transition"
+        />
+        <button class="absolute right-1.5 top-1.5 bottom-1.5 bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-5 rounded-md transition">
+          Buscar
+        </button>
+      </div>
+
+      <!-- Ações Rápidas -->
+      <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
+        <a href="#departamentos" class="text-zinc-700 hover:text-red-600 transition">Departamentos</a>
+        <a href="#marcas" class="text-zinc-700 hover:text-red-600 transition">Marcas</a>
+        <a href="https://wa.me/5511941209722" target="_blank" class="bg-zinc-900 hover:bg-zinc-800 text-white px-4 py-2.5 rounded-lg transition">
+          Cotação B2B
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Carrossel (HTML Real + JS Mínimo) -->
+  <section class="relative bg-zinc-900 text-white overflow-hidden">
+    <div id="carousel-slides" class="relative h-[380px] md:h-[440px]">
+      
+      <!-- Slide 1 -->
+      <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-100 flex items-center bg-gradient-to-r from-zinc-950 via-zinc-900 to-red-950">
+        <div class="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <span class="inline-block bg-red-600/20 border border-red-500 text-red-400 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              Catálogo Oficial APK / Universal
+            </span>
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+              A peça certa para o seu carro sem perder tempo.
+            </h1>
+            <p class="text-zinc-300 text-sm md:text-base max-w-lg">
+              Mais de 20 mil itens entre suspensão, acabamento, grampos, palhetas e ferragens com envio imediato e compra 100% protegida.
+            </p>
+            <div class="pt-2 flex flex-wrap gap-3">
+              <a href="#ofertas-kits" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-lg transition">
+                Ver Kits em Oferta
+              </a>
+              <a href="#departamentos" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg transition">
+                Explorar Categorias
+              </a>
+            </div>
+          </div>
+          <!-- Espaço para imagem limpa do produto/carro -->
+          <div class="hidden md:flex justify-center">
+            <div class="w-80 h-64 bg-zinc-800/80 border border-zinc-700 rounded-2xl flex items-center justify-center text-zinc-400 text-sm p-6 text-center">
+              [Imagem PNG sem fundo de Kit Amortecedor / Palhetas / Grampos]
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 pointer-events-none flex items-center bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <span class="inline-block bg-amber-500/20 border border-amber-400 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              Kits Estratégicos de Oficina
+            </span>
+            <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">
+              Kits de Grampos, Batentes e Lâmpadas a partir de R$ 29,90
+            </h2>
+            <p class="text-zinc-300 text-sm md:text-base max-w-lg">
+              Pacotes fechados na medida exata da sua manutenção para economizar no frete e garantir peças de reserva.
+            </p>
+            <div class="pt-2">
+              <a href="#ofertas-kits" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-lg transition">
+                Conferir Kits Prontos
+              </a>
+            </div>
+          </div>
+          <div class="hidden md:flex justify-center">
+            <div class="w-80 h-64 bg-zinc-800/80 border border-zinc-700 rounded-2xl flex items-center justify-center text-zinc-400 text-sm p-6 text-center">
+              [Imagem PNG de Caixa Organizadora / Kit Grampos Automotivos]
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controles do Carrossel -->
+    <button onclick="prevSlide()" aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+      &#10094;
+    </button>
+    <button onclick="nextSlide()" aria-label="Próximo" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+      &#10095;
+    </button>
+  </section>
+
+  <!-- Filtro Rápido por Veículo -->
+  <section class="max-w-7xl mx-auto px-4 -mt-7 relative z-20">
+    <div class="bg-white p-5 rounded-xl shadow-lg border border-slate-200">
+      <p class="text-xs font-bold uppercase tracking-wider text-zinc-500 mb-3">Encontre peças compatíveis com seu veículo:</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <select class="bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:border-red-600 focus:outline-none">
+          <option value="">1. Selecione a Montadora</option>
+          <option>Volkswagen</option>
+          <option>Fiat</option>
+          <option>Chevrolet (GM)</option>
+          <option>Ford</option>
+          <option>Hyundai / Toyota / Honda</option>
+        </select>
+        <select class="bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:border-red-600 focus:outline-none">
+          <option value="">2. Selecione o Modelo</option>
+          <option>Gol / Voyage / Saveiro</option>
+          <option>Palio / Uno / Strada</option>
+          <option>Onix / Corsa / Celta</option>
+          <option>HB20 / Corolla / Hilux</option>
+        </select>
+        <select class="bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:border-red-600 focus:outline-none">
+          <option value="">3. Ano do Veículo</option>
+          <option>2020 a 2026</option>
+          <option>2015 a 2019</option>
+          <option>2010 a 2014</option>
+          <option>Anteriores a 2010</option>
+        </select>
+        <button class="bg-zinc-900 hover:bg-red-600 text-white font-bold rounded-lg px-4 py-2.5 text-sm transition">
+          Filtrar Peças Compatíveis
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Departamentos Principais (Apenas os 7 grupos reais com estoque) -->
+  <section id="departamentos" class="max-w-7xl mx-auto px-4 py-14">
+    <div class="flex justify-between items-end mb-8">
+      <div>
+        <h2 class="text-2xl font-extrabold text-zinc-900">Navegue por Departamento</h2>
+        <p class="text-sm text-zinc-600">Linhas completas com estoque real a pronta entrega</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+      <a href="#" class="group bg-white p-5 rounded-xl border border-slate-200 hover:border-red-600 hover:shadow-md transition text-center">
+        <div class="w-12 h-12 mx-auto mb-3 bg-red-50 text-red-600 rounded-lg flex items-center justify-center font-bold group-hover:bg-red-600 group-hover:text-white transition">🔧</div>
+        <h3 class="font-bold text-sm text-zinc-900">Suspensão e Direção</h3>
+        <p class="text-xs text-zinc-500 mt-1">Amortecedores, Bieletas e Coxins</p>
+      </a>
+
+      <a href="#" class="group bg-white p-5 rounded-xl border border-slate-200 hover:border-red-600 hover:shadow-md transition text-center">
+        <div class="w-12 h-12 mx-auto mb-3 bg-red-50 text-red-600 rounded-lg flex items-center justify-center font-bold group-hover:bg-red-600 group-hover:text-white transition">🌧️</div>
+        <h3 class="font-bold text-sm text-zinc-900">Palhetas e Limpadores</h3>
+        <p class="text-xs text-zinc-500 mt-1">Linha Leve, Pesada e Braços</p>
+      </a>
+
+      <a href="#" class="group bg-white p-5 rounded-xl border border-slate-200 hover:border-red-600 hover:shadow-md transition text-center">
+        <div class="w-12 h-12 mx-auto mb-3 bg-red-50 text-red-600 rounded-lg flex items-center justify-center font-bold group-hover:bg-red-600 group-hover:text-white transition">🔩</div>
+        <h3 class="font-bold text-sm text-zinc-900">Grampos e Ferragens</h3>
+        <p class="text-xs text-zinc-500 mt-1">Presilhas, Fechaduras e Maçanetas</p>
+      </a>
+
+      <a href="#" class="group bg-white p-5 rounded-xl border border-slate-200 hover:border-red-600 hover:shadow-md transition text-center">
+        <div class="w-12 h-12 mx-auto mb-3 bg-red-50 text-red-600 rounded-lg flex items-center justify-center font-bold group-hover:bg-red-600 group-hover:text-white transition">🛢️</div>
+        <h3 class="font-bold text-sm text-zinc-900">Tampas Automotivas</h3>
+        <p class="text-xs text-zinc-500 mt-1">Radiador, Combustível e Óleo</p>
+      </a>
+
+      <a href="#" class="group bg-white p-5 rounded-xl border border-slate-200 hover:border-red-600 hover:shadow-md transition text-center">
+        <div class="w-12 h-12 mx-auto mb-3 bg-red-50 text-red-600 rounded-lg flex items-center justify-center font-bold group-hover:bg-red-600 group-hover:text-white transition">💡</div>
+        <h3 class="font-bold text-sm text-zinc-900">Elétrica e Cabine</h3>
+        <p class="text-xs text-zinc-500 mt-1">Lâmpadas, Botões e Máquinas de Vidro</p>
+      </a>
+
+      <a href="#" class="group bg-white p-5 rounded-xl border border-slate-200 hover:border-red-600 hover:shadow-md transition text-center">
+        <div class="w-12 h-12 mx-auto mb-3 bg-red-50 text-red-600 rounded-lg flex items-center justify-center font-bold group-hover:bg-red-600 group-hover:text-white transition">➰</div>
+        <h3 class="font-bold text-sm text-zinc-900">Mangueiras e Borrachas</h3>
+        <p class="text-xs text-zinc-500 mt-1">Arrefecimento e Guarnições</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Vitrine de Kits Estratégicos (Checkout Híbrido Seguro) -->
+  <section id="ofertas-kits" class="bg-white py-14 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="mb-8">
+        <span class="text-red-600 font-bold text-xs uppercase tracking-wider">Mais Vendidos Curva A</span>
+        <h2 class="text-2xl font-extrabold text-zinc-900 mt-1">Kits Prontos para Manutenção</h2>
+        <p class="text-sm text-zinc-600">Compre com segurança através das nossas lojas oficiais ou direto pelo WhatsApp</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card Produto 1 -->
+        <div class="border border-slate-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="relative bg-slate-100 h-44 rounded-lg mb-4 flex items-center justify-center text-zinc-400 text-xs">
+              <span class="absolute top-2 left-2 bg-zinc-900 text-white text-[10px] font-bold px-2 py-0.5 rounded">KIT 20 PEÇAS</span>
+              [Foto Kit Grampos Forro Porta]
+            </div>
+            <span class="text-xs text-zinc-500 font-medium">Universal Automotive</span>
+            <h3 class="font-bold text-sm text-zinc-900 mt-1 line-clamp-2">
+              Kit 20 Grampos Fixação Forro de Porta Linha VW Gol / Voyage / Saveiro G5 G6
+            </h3>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <p class="text-xs text-zinc-400 line-through">R$ 44,90</p>
+            <p class="text-xl font-extrabold text-zinc-900">R$ 34,90</p>
+            <a href="#" class="mt-3 block w-full text-center bg-red-600 hover:bg-red-700 text-white font-bold text-xs py-2.5 rounded-lg transition">
+              Comprar no Mercado Livre
+            </a>
+          </div>
+        </div>
+
+        <!-- Card Produto 2 -->
+        <div class="border border-slate-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="relative bg-slate-100 h-44 rounded-lg mb-4 flex items-center justify-center text-zinc-400 text-xs">
+              <span class="absolute top-2 left-2 bg-zinc-900 text-white text-[10px] font-bold px-2 py-0.5 rounded">PAR (2 UNID)</span>
+              [Foto Par Batente Amortecedor]
+            </div>
+            <span class="text-xs text-zinc-500 font-medium">Amortex</span>
+            <h3 class="font-bold text-sm text-zinc-900 mt-1 line-clamp-2">
+              Par Batente e Coifa Amortecedor Dianteiro Fiat Palio / Uno / Siena
+            </h3>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <p class="text-xs text-zinc-400 line-through">R$ 59,90</p>
+            <p class="text-xl font-extrabold text-zinc-900">R$ 46,90</p>
+            <a href="#" class="mt-3 block w-full text-center bg-red-600 hover:bg-red-700 text-white font-bold text-xs py-2.5 rounded-lg transition">
+              Comprar na Shopee
+            </a>
+          </div>
+        </div>
+
+        <!-- Card Produto 3 -->
+        <div class="border border-slate-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="relative bg-slate-100 h-44 rounded-lg mb-4 flex items-center justify-center text-zinc-400 text-xs">
+              <span class="absolute top-2 left-2 bg-zinc-900 text-white text-[10px] font-bold px-2 py-0.5 rounded">PAR DIANTEIRO</span>
+              [Foto Palhetas Limpador]
+            </div>
+            <span class="text-xs text-zinc-500 font-medium">Micro / Universal</span>
+            <h3 class="font-bold text-sm text-zinc-900 mt-1 line-clamp-2">
+              Par Palheta Limpador Para-brisa Silicone Chevrolet Onix / Prisma 2013 a 2019
+            </h3>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <p class="text-xs text-zinc-400 line-through">R$ 49,90</p>
+            <p class="text-xl font-extrabold text-zinc-900">R$ 39,90</p>
+            <a href="#" class="mt-3 block w-full text-center bg-red-600 hover:bg-red-700 text-white font-bold text-xs py-2.5 rounded-lg transition">
+              Comprar no Mercado Livre
+            </a>
+          </div>
+        </div>
+
+        <!-- Card Produto 4 -->
+        <div class="border border-slate-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="relative bg-slate-100 h-44 rounded-lg mb-4 flex items-center justify-center text-zinc-400 text-xs">
+              <span class="absolute top-2 left-2 bg-zinc-900 text-white text-[10px] font-bold px-2 py-0.5 rounded">UNIDADE</span>
+              [Foto Tampa Reservatório]
+            </div>
+            <span class="text-xs text-zinc-500 font-medium">Unick</span>
+            <h3 class="font-bold text-sm text-zinc-900 mt-1 line-clamp-2">
+              Tampa Reservatório Expansão Radiador Hyundai HB20 / Corolla / Hilux
+            </h3>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <p class="text-xs text-zinc-400 line-through">R$ 38,90</p>
+            <p class="text-xl font-extrabold text-zinc-900">R$ 29,90</p>
+            <a href="https://wa.me/5511941209722" target="_blank" class="mt-3 block w-full text-center bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs py-2.5 rounded-lg transition">
+              Pedir via WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Faixa de Fabricantes Parceiros (Separando Loja de Fabricante) -->
+  <section id="marcas" class="max-w-7xl mx-auto px-4 py-12">
+    <p class="text-center text-xs font-bold uppercase tracking-widest text-zinc-400 mb-6">
+      Trabalhamos com os principais fabricantes do mercado de reposição
+    </p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 text-center">
+      <div class="bg-white border border-slate-200 py-4 px-3 rounded-lg font-extrabold text-zinc-700 text-sm">UNIVERSAL</div>
+      <div class="bg-white border border-slate-200 py-4 px-3 rounded-lg font-extrabold text-zinc-700 text-sm">AMORTEX</div>
+      <div class="bg-white border border-slate-200 py-4 px-3 rounded-lg font-extrabold text-zinc-700 text-sm">UNICK</div>
+      <div class="bg-white border border-slate-200 py-4 px-3 rounded-lg font-extrabold text-zinc-700 text-sm">UNIFLEX</div>
+      <div class="bg-white border border-slate-200 py-4 px-3 rounded-lg font-extrabold text-zinc-700 text-sm">MICRO</div>
+      <div class="bg-white border border-slate-200 py-4 px-3 rounded-lg font-extrabold text-zinc-700 text-sm">CARTO</div>
+    </div>
+  </section>
+
+  <!-- Rodapé Oficial e Limpo -->
+  <footer class="bg-zinc-950 text-zinc-400 pt-12 pb-8 border-t border-zinc-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-zinc-800">
+      <div>
+        <div class="bg-white text-white font-black text-lg p-2 rounded inline-block mb-3">
+        <a href="./index.html"><img src="./images/logo-shopping-pecas_LtxK.webp" alt="logo_shoppingpecas" class="justify-center cursor-pointer"></a>
+        </div>
+        <p class="text-xs leading-relaxed">
+          Distribuição especializada em autopeças de reposição, ferragens, suspensão e acabamento para linha leve, utilitários e linha pesada.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-3">Institucional</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#" class="hover:text-white transition">Quem Somos</a></li>
+          <li><a href="#" class="hover:text-white transition">Política de Trocas e Devoluções</a></li>
+          <li><a href="#" class="hover:text-white transition">Formas de Envio e Prazo</a></li>
+          <li><a href="#" class="hover:text-white transition">Compra Segura</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-3">Atendimento</h4>
+        <ul class="space-y-2 text-xs">
+          <li>WhatsApp: (11) 94120-9722</li>
+          <li>E-mail: contato@shoppingpecas.com.br</li>
+          <li>Seg. a Sex. das 08h às 18h</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-3">Canais Oficiais</h4>
+        <p class="text-xs mb-3">Compre também através das nossas lojas oficiais nos marketplaces:</p>
+        <div class="flex gap-2">
+          <span class="bg-zinc-800 text-zinc-200 text-xs font-semibold px-3 py-1.5 rounded">Mercado Livre</span>
+          <span class="bg-zinc-800 text-zinc-200 text-xs font-semibold px-3 py-1.5 rounded">Shopee</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-zinc-500 gap-2">
+      <p>© 2026 Shopping Peças APK Comercial LTDA — CNPJ: 65.573.385/0001-21. Todos os direitos reservados.</p>
+      <p>Catálogo integrado Universal Automotive</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Basico -->
+  <script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.remove('opacity-0', 'pointer-events-none');
+          slide.classList.add('opacity-100');
+        } else {
+          slide.classList.remove('opacity-100');
+          slide.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Troca automática a cada 5 segundos
+    setInterval(nextSlide, 5000);
+  </script>
+</body>
+</html>
