@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "projeto-web",
+=======
+  "name": "prototipo",
+>>>>>>> 0c644808031a1e9735ea6674b53a9dbf8f0eab39
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +15,15 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+<<<<<<< HEAD
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
   }
 }
+=======
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5"
+  }
+}
+  
+>>>>>>> 0c644808031a1e9735ea6674b53a9dbf8f0eab39
